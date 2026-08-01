@@ -3,6 +3,8 @@
   color: var(--text-primary);
   position: relative;
   border-top: 1px solid var(--border-light, rgba(200, 167, 74, 0.15));
+  padding-left: var(--space-6);
+  padding-right: var(--space-6);
 }
 
 .goldLine {
@@ -16,6 +18,8 @@
   grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
   gap: var(--space-12);
   padding: var(--space-16) 0 var(--space-12);
+  max-width: var(--container-max);
+  margin: 0 auto;
 }
 
 /* Brand Column */
@@ -196,6 +200,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: var(--container-max);
+  margin: 0 auto;
 }
 
 .bottomContent p {
@@ -226,48 +232,53 @@
 }
 
 @media (max-width: 600px) {
+  .footer {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
   .footerContent {
     grid-template-columns: 1fr;
     gap: var(--space-8);
-    text-align: center;
+    padding: var(--space-10) 0 var(--space-8);
   }
 
   .brandCol,
   .linksCol,
   .contactCol {
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
   }
 
   .logo {
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .socials {
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .colTitle {
-    text-align: center;
+    text-align: left;
   }
 
   .colTitle::after {
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    transform: none;
   }
 
   .linksCol ul {
-    align-items: center;
+    align-items: flex-start;
   }
 
   .footerLink:hover {
-    padding-left: 0;
+    padding-left: var(--space-2);
     color: var(--parrot-green);
   }
 
   .contactItem {
-    justify-content: center;
-    text-align: center;
+    justify-content: flex-start;
+    text-align: left;
   }
 
   .bottomContent {
@@ -276,4 +287,3 @@
     text-align: center;
   }
 }
-
