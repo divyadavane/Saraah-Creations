@@ -229,10 +229,51 @@
   .footerContent {
     grid-template-columns: 1fr;
     gap: var(--space-8);
+    text-align: center;
   }
+
+  .brandCol,
+  .linksCol,
+  .contactCol {
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo {
+    justify-content: center;
+  }
+
+  .socials {
+    justify-content: center;
+  }
+
+  .colTitle {
+    text-align: center;
+  }
+
+  .colTitle::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .linksCol ul {
+    align-items: center;
+  }
+
+  .footerLink:hover {
+    padding-left: 0;
+    color: var(--parrot-green);
+  }
+
+  .contactItem {
+    justify-content: center;
+    text-align: center;
+  }
+
   .bottomContent {
     flex-direction: column;
     gap: var(--space-3);
     text-align: center;
   }
 }
+
