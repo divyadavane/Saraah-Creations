@@ -1,0 +1,220 @@
+/* ============================================
+   ABOUT PAGE — DARK AESTHETIC EMERALD THEME
+   ============================================ */
+
+.hero {
+  background: var(--bg-main);
+  color: var(--text-primary);
+  padding: 160px 0 var(--space-20);
+  text-align: center;
+  position: relative;
+  border-bottom: 1px solid var(--border-light, rgba(200, 167, 74, 0.15));
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 500px;
+  background: radial-gradient(ellipse at top center, rgba(122, 201, 67, 0.06) 0%, rgba(200, 167, 74, 0.02) 40%, transparent 70%);
+  pointer-events: none;
+}
+
+.heroHeading {
+  font-family: var(--font-heading);
+  font-size: var(--text-5xl);
+  color: var(--text-primary);
+  margin-bottom: var(--space-4);
+  position: relative;
+}
+
+.heroSub {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+.storyContent h3 {
+  font-size: var(--text-2xl);
+  color: var(--text-primary);
+  margin-bottom: var(--space-4);
+}
+
+.storyContent p {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  line-height: 1.9;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-6);
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+
+.storyContent p strong {
+  color: var(--text-primary);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+/* Premium card boxes */
+.cardBox {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light, rgba(200, 167, 74, 0.15));
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  margin-bottom: var(--space-6);
+  box-shadow: var(--shadow-soft, 0 4px 20px rgba(0, 0, 0, 0.05));
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glowing Border Effect */
+.cardBox::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-xl);
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(200, 167, 74, 0.5), transparent 40%, transparent 60%, rgba(122, 201, 67, 0.5));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+  pointer-events: none;
+}
+
+.cardBox:hover {
+  border-color: rgba(200, 167, 74, 0.3);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06), 0 0 20px rgba(122, 201, 67, 0.05);
+  transform: translateY(-6px) scale(1.02);
+  background: var(--bg-card-hover);
+}
+
+.cardBox:hover::before {
+  opacity: 1;
+}
+
+.cardBox h4 {
+  color: var(--gold);
+  margin-bottom: var(--space-3);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: var(--font-body);
+  font-weight: 700;
+}
+
+.cardBox h3 {
+  color: var(--text-primary);
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-4);
+}
+
+/* Values Grid */
+.valueGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+.valueCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light, rgba(200, 167, 74, 0.15));
+  padding: var(--space-8) var(--space-6);
+  border-radius: var(--radius-xl);
+  text-align: center;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glowing Border Effect */
+.valueCard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-xl);
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(122, 201, 67, 0.4), transparent 30%, transparent 70%, rgba(200, 167, 74, 0.4));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.valueCard::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  background: linear-gradient(0deg, rgba(122, 201, 67, 0.1), transparent);
+  transition: height 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.valueCard:hover {
+  border-color: rgba(122, 201, 67, 0.3);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06), 0 0 20px rgba(122, 201, 67, 0.05);
+  transform: translateY(-8px) scale(1.02);
+  background: var(--bg-card-hover);
+}
+
+.valueCard:hover::before {
+  opacity: 1;
+}
+
+.valueCard:hover::after {
+  height: 100%;
+}
+
+.valueIcon {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-4);
+  display: block;
+  filter: drop-shadow(0 0 8px rgba(122, 201, 67, 0.3));
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.valueCard:hover .valueIcon {
+  transform: scale(1.2) translateY(-4px);
+  filter: drop-shadow(0 0 15px rgba(122, 201, 67, 0.8));
+}
+
+.valueCard h3 {
+  color: var(--text-primary);
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-2);
+  position: relative;
+  z-index: 1;
+}
+
+.valueCard p {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 900px) {
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
+}
