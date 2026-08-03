@@ -1,7 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { Play, Camera, Globe, Video, Share2, Mail, Phone, MapPin } from 'lucide-react';
+import { Play, Camera, Globe, Mail, Phone, MapPin } from 'lucide-react';
+import { Youtube, Linkedin } from '@/components/ui/SocialIcons';
 import styles from './Footer.module.css';
 
 const quickLinks = [
@@ -34,7 +35,7 @@ export default function Footer() {
               <Play size={12} fill="var(--parrot-green)" color="var(--parrot-green)" />
             </div>
             <div className={styles.logoText}>
-              <span className={styles.logoMain}>SARRAAH</span>
+              <span className={styles.logoMain}>SARAAH</span>
               <span className={styles.logoSub}>CREATION</span>
             </div>
           </Link>
@@ -43,9 +44,9 @@ export default function Footer() {
           </p>
           <p className={styles.founded}>Founded by <strong>Sarika Mahesh Mene</strong></p>
           <div className={styles.socials}>
+            <a href="https://youtube.com/@sarikamenepresesnts-saraah818?si=zVgF96TWQ3QxIUbJ" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className={styles.socialIcon}><Youtube size={18} /></a>
+            <a href="https://www.linkedin.com/in/sarikamene?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className={styles.socialIcon}><Linkedin size={18} /></a>
             <a href="#" aria-label="Instagram" className={styles.socialIcon}><Camera size={18} /></a>
-            <a href="https://youtube.com/@sarikamenepresesnts-saraah818?si=zVgF96TWQ3QxIUbJ" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className={styles.socialIcon}><Video size={18} /></a>
-            <a href="#" aria-label="LinkedIn" className={styles.socialIcon}><Share2 size={18} /></a>
             <a href="#" aria-label="Website" className={styles.socialIcon}><Globe size={18} /></a>
           </div>
         </div>

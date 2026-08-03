@@ -125,6 +125,13 @@
   margin-bottom: var(--space-4);
 }
 
+.cardBox p {
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  line-height: 1.8;
+  font-size: var(--text-base);
+}
+
 /* Values Grid */
 .valueGrid {
   display: grid;

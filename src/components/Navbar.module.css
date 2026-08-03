@@ -6,17 +6,24 @@
   z-index: var(--z-sticky);
   padding: var(--space-5) 0;
   transition: all var(--duration-normal) var(--ease-out);
-  background: rgba(30, 30, 30, 0.88);
+  background: var(--nav-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.nonHomeNav {
+  background: var(--nav-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .scrolled {
-  background: rgba(250, 248, 243, 0.92);
+  background: var(--nav-bg);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border-light, rgba(200, 167, 74, 0.15));
+  border-bottom: 1px solid var(--border-color);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   padding: var(--space-3) 0;
 }
@@ -64,13 +71,9 @@
   font-family: var(--font-display);
   font-size: 1.15rem;
   font-weight: 800;
-  color: #FAF8F3;
+  color: var(--text-primary);
   letter-spacing: 4px;
   transition: color var(--duration-normal) var(--ease-out);
-}
-
-.scrolled .logoMain {
-  color: var(--text-primary);
 }
 
 .logoSub {
@@ -93,7 +96,7 @@
   font-family: var(--font-heading);
   font-size: var(--text-sm);
   font-weight: 700;
-  color: #FAF8F3;
+  color: var(--text-primary);
   text-decoration: none;
   position: relative;
   letter-spacing: 1.5px;
@@ -101,12 +104,9 @@
   transition: color var(--duration-fast) var(--ease-out);
 }
 
-.scrolled .navLink {
-  color: var(--text-secondary);
-}
-
-.navLink:hover {
-  color: var(--parrot-green) !important;
+.navLink:hover,
+.activeNavLink {
+  color: var(--parrot-green);
 }
 
 .navLinkLine {
@@ -132,15 +132,11 @@
 }
 
 .socialIcon {
-  color: #FAF8F3;
+  color: var(--text-secondary);
   transition: all var(--duration-fast) var(--ease-out);
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.scrolled .socialIcon {
-  color: var(--text-secondary);
 }
 
 .socialIcon:hover {
@@ -152,20 +148,15 @@
 /* Mobile Toggle */
 .mobileToggle {
   display: none;
-  color: #FAF8F3;
+  color: var(--text-primary);
   z-index: 10;
 }
 
-.scrolled .mobileToggle {
-  color: var(--text-primary);
-}
-
-/* Mobile Overlay */
 .mobileOverlay {
   position: fixed;
   inset: 0;
   z-index: var(--z-overlay);
-  background: rgba(250, 248, 243, 0.95);
+  background: color-mix(in srgb, var(--bg-main) 95%, transparent);
   backdrop-filter: blur(12px);
 }
 

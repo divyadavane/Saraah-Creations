@@ -1,6 +1,7 @@
 export const filmData = {
   title: 'Aarti: The Unknown Love Story',
-  tagline: 'A true story of unconditional love and human resilience',
+  tagline: 'A true story of unconditional love and human resilience (Marathi Feature Film)',
+  language: 'Marathi',
   director: 'Sarika Mahesh Mene',
   roles: ['Director', 'Writer / Screenplay', 'Producer'],
   banner: 'Saraah Creation',

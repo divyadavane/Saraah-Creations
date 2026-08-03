@@ -12,7 +12,7 @@ export const projectsData = [
     imageVertical: '/images/aarti-poster-vertical.png',
     featured: true,
     year: '2017',
-    language: 'Hindi',
+    language: 'Marathi',
     genre: 'Drama / Romance',
     imdbRating: '8.0',
     bmsRating: '7.8',

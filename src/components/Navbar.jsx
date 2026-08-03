@@ -3,7 +3,10 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
-import { Menu, X, Play, Camera, Video, Film } from 'lucide-react';
+import { usePathname } from 'next/navigation';
+import { Menu, X, Play, Camera, Film } from 'lucide-react';
+import { Youtube, Linkedin } from '@/components/ui/SocialIcons';
+import ThemeToggle from '@/components/ThemeToggle';
 import styles from './Navbar.module.css';
 
 const navLinks = [
@@ -17,8 +20,10 @@ const navLinks = [
 ];
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const isHomePage = pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -37,7 +42,7 @@ export default function Navbar() {
   return (
     <>
       <motion.nav
-        className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}
+        className={`${styles.navbar} ${scrolled ? styles.scrolled : ''} ${!isHomePage ? styles.nonHomeNav : ''}`}
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
@@ -49,7 +54,7 @@ export default function Navbar() {
               <Play size={14} fill="var(--parrot-green)" color="var(--parrot-green)" />
             </div>
             <div className={styles.logoText}>
-              <span className={styles.logoMain}>SARRAAH</span>
+              <span className={styles.logoMain}>SARAAH</span>
               <span className={styles.logoSub}>CREATION</span>
             </div>
           </Link>
@@ -64,11 +69,11 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Social Icons - Right */}
+          {/* Right Actions: Social Icons & Theme Toggle */}
           <div className={styles.socialNav}>
-            <a href="#" aria-label="Instagram" className={styles.socialIcon}><Camera size={18} /></a>
-            <a href="https://youtube.com/@sarikamenepresesnts-saraah818?si=zVgF96TWQ3QxIUbJ" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className={styles.socialIcon}><Video size={18} /></a>
-            <a href="#" aria-label="IMDb" className={styles.socialIcon}><Film size={18} /></a>
+            <ThemeToggle showLabel={true} />
+            <a href="https://youtube.com/@sarikamenepresesnts-saraah818?si=zVgF96TWQ3QxIUbJ" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className={styles.socialIcon}><Youtube size={18} /></a>
+            <a href="https://www.linkedin.com/in/sarikamene?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className={styles.socialIcon}><Linkedin size={18} /></a>
           </div>
 
           {/* Mobile Toggle */}
@@ -100,6 +105,9 @@ export default function Navbar() {
               transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
             >
               <div className={styles.mobileMenuContent}>
+                <div style={{ marginBottom: '1.5rem' }}>
+                  <ThemeToggle showLabel={true} />
+                </div>
                 {navLinks.map((link, i) => (
                   <motion.div
                     key={link.name}
@@ -140,3 +148,4 @@ export default function Navbar() {
     </>
   );
 }
+

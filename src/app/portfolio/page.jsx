@@ -106,7 +106,7 @@ export default function Portfolio() {
                     <Globe size={16} className={styles.metaIcon} />
                     <div>
                       <span className={styles.metaLabel}>Language</span>
-                      <span className={styles.metaValue}>Hindi</span>
+                      <span className={styles.metaValue}>Marathi</span>
                     </div>
                   </div>
                   <div className={styles.metaItem}>

@@ -14,7 +14,8 @@
 @custom-variant dark (&:is(.dark *));
 
 /* ---- CSS Custom Properties ---- */
-:root {
+:root,
+[data-theme="light"] {
   /* Warm Premium Light System */
   --bg-main: #FAF8F3;            /* Warm cream primary */
   --bg-alt: #F1EEE6;             /* Alt light background */
@@ -29,6 +30,9 @@
   --dark-gray: #1E1E1E;          /* Primary dark text */
   --near-black: #FAF8F3;
   --black: #1E1E1E;
+
+  --border-color: rgba(30, 30, 30, 0.12);
+  --border-subtle: rgba(30, 30, 30, 0.08);
 
   /* Signature Forest Green (pop on light) */
   --parrot-green: #4A7C2F;
@@ -55,7 +59,94 @@
   --text-primary: #1E1E1E;
   --text-secondary: #4A4A4A;
   --text-muted: #7A7A7A;
+  --nav-bg: rgba(250, 248, 243, 0.9);
+}
 
+/* ====== 🌿 DARK GREEN EMERALD THEME ====== */
+[data-theme="dark-green"] {
+  --bg-main: #07170E;            /* Rich deep forest emerald */
+  --bg-alt: #0D2417;             /* Slightly lighter emerald layer */
+  --bg-card: #122C1D;            /* Deep emerald card surface */
+  --bg-card-hover: #183826;      /* Hover card surface */
+
+  --white: #FFFFFF;
+  --off-white: #E2F4E9;
+  --light-gray: #1E442F;
+  --medium-gray: #2A5C40;
+  --text-gray: #A2D6B5;
+  --dark-gray: #E8F7EE;
+  --near-black: #07170E;
+  --black: #040E08;
+
+  --border-color: rgba(74, 222, 128, 0.18);
+  --border-subtle: rgba(74, 222, 128, 0.1);
+
+  --parrot-green: #10B981;       /* Radiant emerald green */
+  --parrot-green-light: #34D399;
+  --parrot-green-dark: #059669;
+  --parrot-green-glow: rgba(16, 185, 129, 0.35);
+  --parrot-green-10: rgba(16, 185, 129, 0.12);
+  --parrot-green-20: rgba(16, 185, 129, 0.22);
+
+  --gold: #D4AF37;
+  --gold-light: #F3E5AB;
+  --gold-dark: #AA820A;
+  --gold-10: rgba(212, 175, 55, 0.15);
+  --gold-20: rgba(212, 175, 55, 0.25);
+
+  --deep-red: #E11D48;
+  --deep-red-light: #F43F5E;
+  --deep-red-dark: #9F1239;
+
+  --text-primary: #E6F6ED;
+  --text-secondary: #A0D6B4;
+  --text-muted: #6EA784;
+  --nav-bg: rgba(7, 23, 14, 0.88);
+}
+
+/* ====== 🌙 DARK ONYX CINEMATIC THEME ====== */
+[data-theme="dark"] {
+  --bg-main: #0A0D0C;            /* Deep obsidian dark */
+  --bg-alt: #121715;             /* Alt dark layer */
+  --bg-card: #181E1C;            /* Card surface */
+  --bg-card-hover: #222B28;      /* Hover card surface */
+
+  --white: #FFFFFF;
+  --off-white: #FFFFFF;
+  --light-gray: #242D2A;
+  --medium-gray: #35423E;
+  --text-gray: #F1F5F9;
+  --dark-gray: #FFFFFF;
+  --near-black: #0A0D0C;
+  --black: #000000;
+
+  --border-color: rgba(255, 255, 255, 0.2);
+  --border-subtle: rgba(255, 255, 255, 0.12);
+
+  --parrot-green: #22C55E;
+  --parrot-green-light: #4ADE80;
+  --parrot-green-dark: #15803D;
+  --parrot-green-glow: rgba(34, 197, 94, 0.3);
+  --parrot-green-10: rgba(34, 197, 94, 0.1);
+  --parrot-green-20: rgba(34, 197, 94, 0.2);
+
+  --gold: #EAB308;
+  --gold-light: #FDE047;
+  --gold-dark: #A16207;
+
+  --text-primary: #FFFFFF;
+  --text-secondary: #F1F5F9;
+  --text-muted: #E2E8F0;
+  --nav-bg: rgba(10, 13, 12, 0.92);
+}
+
+/* Ensure small fonts in dark mode are crisp white and 100% visible */
+[data-theme="dark"] body {
+  color: #F1F5F9;
+}
+
+
+:root {
   /* ====== PREMIUM FONT SYSTEM ====== */
   --font-display: 'Fraunces', 'Playfair Display', 'Georgia', serif;
   --font-heading: 'Fraunces', 'Playfair Display', serif;
@@ -238,7 +329,7 @@ p {
   font-family: var(--font-body);
   font-size: var(--text-md);
   line-height: 1.65;
-  color: #2A2A2A;
+  color: var(--text-secondary);
   font-weight: 400;
   letter-spacing: 0.015em;
 }

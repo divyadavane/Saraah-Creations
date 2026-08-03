@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Camera, Globe, Video, Share2 } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Camera, Globe } from 'lucide-react';
+import { Youtube, Linkedin } from '@/components/ui/SocialIcons';
 import SectionHeading from '@/components/ui/SectionHeading';
 import ScrollReveal from '@/components/animations/ScrollReveal';
 import Button from '@/components/ui/Button';
@@ -219,9 +220,9 @@ export default function Contact() {
                   <div style={{ borderTop: '1px solid rgba(122, 201, 67, 0.15)', paddingTop: '1.5rem', marginTop: '0.5rem' }}>
                     <div className={styles.infoTitle} style={{ marginBottom: '0.75rem' }}>Follow Saraah Creation</div>
                     <div style={{ display: 'flex', gap: '0.75rem' }}>
+                      <a href="https://youtube.com/@sarikamenepresesnts-saraah818?si=zVgF96TWQ3QxIUbJ" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="YouTube"><Youtube size={18} /></a>
+                      <a href="https://www.linkedin.com/in/sarikamene?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="LinkedIn"><Linkedin size={18} /></a>
                       <a href="#" className={styles.socialLink} aria-label="Instagram"><Camera size={18} /></a>
-                      <a href="https://youtube.com/@sarikamenepresesnts-saraah818?si=zVgF96TWQ3QxIUbJ" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="YouTube"><Video size={18} /></a>
-                      <a href="#" className={styles.socialLink} aria-label="LinkedIn"><Share2 size={18} /></a>
                       <a href="#" className={styles.socialLink} aria-label="Website"><Globe size={18} /></a>
                     </div>
                   </div>

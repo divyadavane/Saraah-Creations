@@ -14,29 +14,22 @@ import styles from './page.module.css';
 export default function Home() {
   return (
     <>
-      {/* 1. CLEAN CINEMATIC HERO SECTION (WHITE & LUXURIOUS) */}
+      {/* 1. CINEMATIC HERO SECTION (FULL LANDING PAGE RED CAMERA RIG BACKGROUND) */}
       <section className={styles.hero}>
         <div className={styles.heroBg}>
           <Image
-            src="/hero_background_light_ultra_clean.png"
-            alt="Saraah Creation Film Production Studio"
+            src="/images/abcd.png"
+            alt="Film crew operating a RED Digital Cinema camera"
             fill
             priority
+            unoptimized
             className={styles.heroBgImage}
           />
+          <div className={styles.heroOverlay}></div>
         </div>
 
         <div className={`container ${styles.heroContent}`}>
           <div className={styles.heroTextWrapper}>
-            <motion.div
-              className={`${styles.heroBadge} glass-badge`}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              STORIES THAT STAY
-            </motion.div>
-
             <h1 className={`${styles.heroHeading} kinetic-hover`}>
               <SplitText
                 text="VISION."
@@ -80,8 +73,9 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
+              style={{ marginTop: '5.5rem' }}
             >
-              <Button href="/portfolio" variant="primary" size="lg" icon>
+              <Button href="/portfolio" variant="primary" size="lg" icon style={{ padding: '1.25rem 3rem', fontSize: '1.05rem' }}>
                 VIEW OUR WORK
               </Button>
             </motion.div>
@@ -96,20 +90,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2. FEATURED CINEMATIC SHOWCASE — AARTI */}
+      {/* 2. FEATURED CINEMATIC SHOWCASE — AARTI (MARATHI FEATURE FILM) */}
       <section className={styles.featuredShowcase} id="projects">
         <div className={`container ${styles.featuredShowcaseInner}`}>
           {/* Left: Text Column */}
           <div className={styles.featuredTextCol}>
-            <span className={`glass-badge ${styles.featuredBadge}`}>FEATURED CINEMATIC RELEASE</span>
+            <span className={`glass-badge ${styles.featuredBadge}`}>FEATURED MARATHI CINEMA RELEASE</span>
             <h2 className={`${styles.featuredTitle} text-fire-gradient kinetic-hover`}>
               Aarti: The Unknown Love Story
             </h2>
             <p className={styles.featuredSub}>
-              Written, Produced & Directed by <strong>Sarika Mahesh Mene</strong>
+              Written, Produced & Directed by <strong>Sarika Mahesh Mene</strong> • <em>Marathi Feature Film</em>
             </p>
             <p className={styles.featuredDesc}>
-              An emotionally resonant feature film based on the real-life story of Sunny Pawar and Aarti Makwana — a gripping narrative of courage, loyalty, and unconditional love.
+              An emotionally resonant Marathi feature film based on the real-life story of Sunny Pawar and Aarti Makwana — a gripping narrative of courage, loyalty, and unconditional love.
             </p>
 
             {/* Ratings Row */}

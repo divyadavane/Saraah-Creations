@@ -116,7 +116,7 @@ const INJECTED_STYLES = `
 `;
 
 export function CinematicHero({ 
-  brandName = "SARRAAH",
+  brandName = "SARAAH",
   tagline1 = "Stories That Move People,",
   tagline2 = "Ideas That Move Brands.",
   cardHeading = "Creating Cinema. Building Brands.",
