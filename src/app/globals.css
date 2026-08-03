@@ -17,8 +17,8 @@
 :root,
 [data-theme="light"] {
   /* Warm Premium Light System */
-  --bg-main: #FAF8F3;            /* Warm cream primary */
-  --bg-alt: #F1EEE6;             /* Alt light background */
+  --bg-main: #FFF8EB;            /* More vibrant warm cream primary */
+  --bg-alt: #F7EFE0;             /* More vibrant alt light background */
   --bg-card: #FFFFFF;            /* White card background */
   --bg-card-hover: #F6F3EC;      /* Subtle card hover state */
 
@@ -64,8 +64,8 @@
 
 /* ====== 🌿 DARK GREEN EMERALD THEME ====== */
 [data-theme="dark-green"] {
-  --bg-main: #07170E;            /* Rich deep forest emerald */
-  --bg-alt: #0D2417;             /* Slightly lighter emerald layer */
+  --bg-main: #0B2816;            /* More vibrant deep forest emerald */
+  --bg-alt: #133D22;             /* More vibrant emerald layer */
   --bg-card: #122C1D;            /* Deep emerald card surface */
   --bg-card-hover: #183826;      /* Hover card surface */
 
@@ -106,8 +106,8 @@
 
 /* ====== 🌙 DARK ONYX CINEMATIC THEME ====== */
 [data-theme="dark"] {
-  --bg-main: #0A0D0C;            /* Deep obsidian dark */
-  --bg-alt: #121715;             /* Alt dark layer */
+  --bg-main: #101815;            /* More vibrant deep obsidian */
+  --bg-alt: #162620;             /* More vibrant alt dark layer */
   --bg-card: #181E1C;            /* Card surface */
   --bg-card-hover: #222B28;      /* Hover card surface */
 

@@ -81,13 +81,6 @@ export default function Home() {
             </motion.div>
           </div>
         </div>
-
-        <div className={styles.heroScrollIndicator}>
-          <span>Scroll</span>
-          <div className={styles.scrollMouse}>
-            <div className={styles.scrollDot}></div>
-          </div>
-        </div>
       </section>
 
       {/* 2. FEATURED CINEMATIC SHOWCASE — AARTI (MARATHI FEATURE FILM) */}

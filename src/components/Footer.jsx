@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Play, Camera, Globe, Mail, Phone, MapPin } from 'lucide-react';
+import { Play, Mail, Phone, MapPin } from 'lucide-react';
 import { Youtube, Linkedin } from '@/components/ui/SocialIcons';
 import styles from './Footer.module.css';
 
@@ -46,8 +46,6 @@ export default function Footer() {
           <div className={styles.socials}>
             <a href="https://youtube.com/@sarikamenepresesnts-saraah818?si=zVgF96TWQ3QxIUbJ" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className={styles.socialIcon}><Youtube size={18} /></a>
             <a href="https://www.linkedin.com/in/sarikamene?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className={styles.socialIcon}><Linkedin size={18} /></a>
-            <a href="#" aria-label="Instagram" className={styles.socialIcon}><Camera size={18} /></a>
-            <a href="#" aria-label="Website" className={styles.socialIcon}><Globe size={18} /></a>
           </div>
         </div>
 

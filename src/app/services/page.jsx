@@ -38,7 +38,7 @@ export default function Services() {
                 <div className={styles.subGrid}>
                   {service.subCategories.map((sub, i) => (
                     <div key={i} className={styles.subItem}>
-                      ✓ {sub}
+                      {sub}
                     </div>
                   ))}
                 </div>
